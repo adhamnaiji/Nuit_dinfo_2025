@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "STL Vision - Visualiseur 3D",
   description:
     "Explorez et visualisez vos modèles 3D en temps réel. Téléversez un fichier STL et manipulez-le avec rotation, zoom et plus encore.",
-  generator: "v0.app",
+  generator: "",
   icons: {
     icon: [
       {

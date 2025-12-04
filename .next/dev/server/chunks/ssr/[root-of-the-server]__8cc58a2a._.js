@@ -74,7 +74,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$vercel$2f$
 const metadata = {
     title: "STL Vision - Visualiseur 3D",
     description: "Explorez et visualisez vos modèles 3D en temps réel. Téléversez un fichier STL et manipulez-le avec rotation, zoom et plus encore.",
-    generator: "v0.app",
+    generator: "",
     icons: {
         icon: [
             {
