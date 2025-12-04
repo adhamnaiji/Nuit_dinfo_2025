@@ -1,0 +1,3 @@
+{
+  "/api/send-quote/route": "app/api/send-quote/route.js"
+}
