@@ -78,19 +78,19 @@ const metadata = {
     icons: {
         icon: [
             {
-                url: "/icon-light-32x32.png",
+                url: "app/favicon.jpg",
                 media: "(prefers-color-scheme: light)"
             },
             {
-                url: "/icon-dark-32x32.png",
+                url: "app/favicon.jpg",
                 media: "(prefers-color-scheme: dark)"
             },
             {
-                url: "/icon.svg",
+                url: "app/favicon.jpg",
                 type: "image/svg+xml"
             }
         ],
-        apple: "/apple-icon.png"
+        apple: "app/favicon.jpg"
     }
 };
 function RootLayout({ children }) {
