@@ -1,7 +1,19 @@
 import { type NextRequest, NextResponse } from "next/server"
 import Stripe from "stripe"
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
+// ✅ Lazy load Stripe - only initialize at runtime, not during build
+let stripeInstance: Stripe | null = null
+
+function getStripe(): Stripe {
+  if (!stripeInstance) {
+    const apiKey = process.env.STRIPE_SECRET_KEY
+    if (!apiKey) {
+      throw new Error("STRIPE_SECRET_KEY is not configured")
+    }
+    stripeInstance = new Stripe(apiKey)
+  }
+  return stripeInstance
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -11,6 +23,9 @@ export async function POST(request: NextRequest) {
     if (!fileName || !dimensions || !userEmail) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
+
+    // ✅ FIX: Get Stripe instance inside POST function
+    const stripe = getStripe()
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -44,7 +59,26 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ url: session.url }, { status: 200 })
   } catch (error) {
-    console.error("[v0] Checkout error:", error)
-    return NextResponse.json({ error: "Erreur lors de la création de la session de paiement" }, { status: 500 })
+    console.error("[Checkout] Error:", error)
+    return NextResponse.json(
+      { error: "Erreur lors de la création de la session de paiement" },
+      { status: 500 }
+    )
+  }
+}
+
+// Optional: Health check
+export async function GET() {
+  try {
+    getStripe()
+    return NextResponse.json({
+      status: "ok",
+      message: "Checkout API ready",
+    })
+  } catch (error) {
+    return NextResponse.json(
+      { status: "error", message: "STRIPE_SECRET_KEY not configured" },
+      { status: 503 }
+    )
   }
 }
