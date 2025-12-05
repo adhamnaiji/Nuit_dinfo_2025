@@ -412,7 +412,7 @@ function UploadSection({ onFileUpload }) {
     const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const handleFile = async (file)=>{
         if (!file.name.toLowerCase().endsWith(".stl")) {
-            alert("Veuillez sélectionner un fichier STL");
+            alert("Please select an STL file");
             return;
         }
         setIsLoading(true);
@@ -420,8 +420,8 @@ function UploadSection({ onFileUpload }) {
             const buffer = await file.arrayBuffer();
             onFileUpload(file, buffer);
         } catch (error) {
-            console.error("Erreur lors du chargement du fichier:", error);
-            alert("Erreur lors du chargement du fichier");
+            console.error("Error loading file:", error);
+            alert("Error loading file");
         } finally{
             setIsLoading(false);
         }
@@ -451,7 +451,7 @@ function UploadSection({ onFileUpload }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                             className: "text-3xl md:text-4xl font-bold text-white",
-                            children: "Téléchargez votre modèle 3D"
+                            children: "Upload your 3D Model"
                         }, void 0, false, {
                             fileName: "[project]/components/upload-section.tsx",
                             lineNumber: 58,
@@ -459,7 +459,7 @@ function UploadSection({ onFileUpload }) {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-gray-300",
-                            children: "Téléchargez un fichier STL pour visualiser et explorer votre modèle 3D en temps réel."
+                            children: "Upload an STL file to visualize and explore your 3D model in real-time"
                         }, void 0, false, {
                             fileName: "[project]/components/upload-section.tsx",
                             lineNumber: 59,
@@ -517,7 +517,7 @@ function UploadSection({ onFileUpload }) {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-sm text-gray-400",
-                                                children: "ou cliquez pour parcourir"
+                                                children: "or click to browse"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/upload-section.tsx",
                                                 lineNumber: 94,
@@ -533,7 +533,7 @@ function UploadSection({ onFileUpload }) {
                                         className: "pt-4 border-t border-white/10 w-full",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-xs text-gray-500 text-center",
-                                            children: "Format pris en charge : .STL (ASCII ou binaire)"
+                                            children: "Supported format: .STL (ASCII or binary)"
                                         }, void 0, false, {
                                             fileName: "[project]/components/upload-section.tsx",
                                             lineNumber: 98,
@@ -587,7 +587,7 @@ function UploadSection({ onFileUpload }) {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-gray-400",
-                            children: "Chargement du fichier..."
+                            children: "Loading file..."
                         }, void 0, false, {
                             fileName: "[project]/components/upload-section.tsx",
                             lineNumber: 120,
@@ -2854,1270 +2854,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/components/controls-panel.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>ControlsPanel
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/rotate-ccw.js [app-client] (ecmascript) <export default as RotateCcw>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/eye.js [app-client] (ecmascript) <export default as Eye>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2d$off$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__EyeOff$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/eye-off.js [app-client] (ecmascript) <export default as EyeOff>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/upload.js [app-client] (ecmascript) <export default as Upload>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/rotate-cw.js [app-client] (ecmascript) <export default as RotateCw>");
-"use client";
-;
-;
-function ControlsPanel({ fileName, wireframe, setWireframe, meshColor, setMeshColor, autoRotate, setAutoRotate, onReset, onNewFile }) {
-    const colors = [
-        {
-            name: "Blue",
-            value: "#3b82f6"
-        },
-        {
-            name: "Purple",
-            value: "#8b5cf6"
-        },
-        {
-            name: "Pink",
-            value: "#ec4899"
-        },
-        {
-            name: "Green",
-            value: "#10b981"
-        },
-        {
-            name: "Orange",
-            value: "#f97316"
-        },
-        {
-            name: "Cyan",
-            value: "#06b6d4"
-        }
-    ];
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-6",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-black/40 backdrop-blur border border-white/10 rounded-xl p-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-xs text-gray-500 mb-2",
-                        children: "Loaded File"
-                    }, void 0, false, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-sm font-medium text-white truncate",
-                        children: fileName || "No file"
-                    }, void 0, false, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 42,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/controls-panel.tsx",
-                lineNumber: 40,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-black/40 backdrop-blur border border-white/10 rounded-xl p-4 space-y-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-sm font-semibold text-white",
-                        children: "Display"
-                    }, void 0, false, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 47,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setAutoRotate(!autoRotate),
-                        className: "w-full flex items-center justify-between px-3 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-sm text-white",
-                                children: "Auto-rotate"
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 53,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$cw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCw$3e$__["RotateCw"], {
-                                size: 16,
-                                className: autoRotate ? "text-blue-400" : "text-gray-400"
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 54,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 49,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setWireframe(!wireframe),
-                        className: "w-full flex items-center justify-between px-3 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-sm text-white",
-                                children: wireframe ? "Wireframe Mode" : "Solid Mode"
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 61,
-                                columnNumber: 11
-                            }, this),
-                            wireframe ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
-                                size: 16,
-                                className: "text-blue-400"
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 62,
-                                columnNumber: 24
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2d$off$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__EyeOff$3e$__["EyeOff"], {
-                                size: 16,
-                                className: "text-gray-400"
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 62,
-                                columnNumber: 70
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 57,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/controls-panel.tsx",
-                lineNumber: 46,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-black/40 backdrop-blur border border-white/10 rounded-xl p-4 space-y-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "text-sm font-semibold text-white",
-                        children: "Color"
-                    }, void 0, false, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 69,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-3 gap-2",
-                        children: colors.map((col)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setMeshColor(col.value),
-                                className: `group relative h-10 rounded-lg transition-all duration-200 ${meshColor === col.value ? "ring-2 ring-white scale-105" : "hover:scale-110"}`,
-                                style: {
-                                    backgroundColor: col.value
-                                },
-                                title: col.name,
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "sr-only",
-                                    children: col.name
-                                }, void 0, false, {
-                                    fileName: "[project]/components/controls-panel.tsx",
-                                    lineNumber: 81,
-                                    columnNumber: 15
-                                }, this)
-                            }, col.value, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 72,
-                                columnNumber: 13
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 70,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/controls-panel.tsx",
-                lineNumber: 68,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "space-y-3",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: onReset,
-                        className: "w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium rounded-lg transition-all duration-200",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$rotate$2d$ccw$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__RotateCcw$3e$__["RotateCcw"], {
-                                size: 16
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 93,
-                                columnNumber: 11
-                            }, this),
-                            "Reset View"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 89,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: onNewFile,
-                        className: "w-full flex items-center justify-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white font-medium rounded-lg transition-all duration-200",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                                size: 16
-                            }, void 0, false, {
-                                fileName: "[project]/components/controls-panel.tsx",
-                                lineNumber: 101,
-                                columnNumber: 11
-                            }, this),
-                            "New File"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/controls-panel.tsx",
-                        lineNumber: 97,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/controls-panel.tsx",
-                lineNumber: 88,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-blue-500/10 border border-blue-500/20 rounded-lg p-4",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-xs text-blue-200",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                            children: "Tip:"
-                        }, void 0, false, {
-                            fileName: "[project]/components/controls-panel.tsx",
-                            lineNumber: 109,
-                            columnNumber: 11
-                        }, this),
-                        " Left-click to rotate, scroll to zoom, right-click to pan the view."
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/controls-panel.tsx",
-                    lineNumber: 108,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/controls-panel.tsx",
-                lineNumber: 107,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/components/controls-panel.tsx",
-        lineNumber: 38,
-        columnNumber: 5
-    }, this);
-}
-_c = ControlsPanel;
-var _c;
-__turbopack_context__.k.register(_c, "ControlsPanel");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
-}),
-"[project]/components/stl-chatbot.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>STLChatbot
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/card.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/message-circle.js [app-client] (ecmascript) <export default as MessageCircle>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/send.js [app-client] (ecmascript) <export default as Send>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-alert.js [app-client] (ecmascript) <export default as AlertCircle>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/upload.js [app-client] (ecmascript) <export default as Upload>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-client] (ecmascript) <export default as Trash2>");
-;
-var _s = __turbopack_context__.k.signature();
-"use client";
-;
-;
-;
-;
-function STLChatbot({ stlFileInfo, fileName }) {
-    _s();
-    const [messages, setMessages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const messagesEndRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "STLChatbot.useEffect": ()=>{
-            if (stlFileInfo) {
-                console.log('✅ STL File Info disponible dans chatbot:');
-                console.log('   - Nom:', stlFileInfo.name);
-                console.log('   - Taille:', stlFileInfo.size, 'bytes');
-                console.log('   - Dimensions:', stlFileInfo.dimensions);
-            } else {
-                console.log('❌ Pas de stlFileInfo disponible');
-            }
-        }
-    }["STLChatbot.useEffect"], [
-        stlFileInfo
-    ]);
-    const activeFileInfo = stlFileInfo || (fileName ? {
-        name: fileName,
-        size: 0
-    } : null);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "STLChatbot.useEffect": ()=>{
-            messagesEndRef.current?.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    }["STLChatbot.useEffect"], [
-        messages
-    ]);
-    const handleFileInputChange = (e)=>{
-        const file = e.currentTarget.files?.[0];
-        if (file) {
-            console.log('📁 Fichier sélectionné:', file.name);
-            const event = new CustomEvent('stl-file-selected', {
-                detail: {
-                    file
-                }
-            });
-            document.dispatchEvent(event);
-            e.currentTarget.value = '';
-        }
-    };
-    const triggerFileInput = ()=>{
-        fileInputRef.current?.click();
-    };
-    const sendMessage = async ()=>{
-        if (!input.trim() || loading) return;
-        setError(null);
-        const userMessage = input.trim();
-        setInput("");
-        const updatedMessages = [
-            ...messages,
-            {
-                role: "user",
-                content: userMessage
-            }
-        ];
-        setMessages(updatedMessages);
-        setLoading(true);
-        try {
-            console.log('📤 === ENVOI AU CHATBOT ===');
-            console.log('   Nombre de messages:', updatedMessages.length);
-            console.log('   Dernier message:', userMessage);
-            console.log('   Fichier info envoyé:', activeFileInfo);
-            const requestBody = {
-                messages: updatedMessages,
-                stlFileInfo: activeFileInfo || null
-            };
-            console.log('📦 Corps de la requête:', JSON.stringify(requestBody, null, 2));
-            const response = await fetch("/api/chat-stl", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(requestBody)
-            });
-            const data = await response.json();
-            console.log('📥 Réponse reçue:', {
-                status: response.status,
-                success: data.success,
-                error: data.error
-            });
-            if (!response.ok) {
-                throw new Error(data.error || "Erreur API");
-            }
-            setMessages((prev)=>[
-                    ...prev,
-                    {
-                        role: "assistant",
-                        content: data.reply
-                    }
-                ]);
-        } catch (err) {
-            const errorMsg = err instanceof Error ? err.message : "Erreur de connexion";
-            setError(errorMsg);
-            console.error("❌ Chat error:", err);
-            setMessages((prev)=>prev.slice(0, -1));
-        } finally{
-            setLoading(false);
-        }
-    };
-    const handleKeyPress = (e)=>{
-        if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            sendMessage();
-        }
-    };
-    const clearChat = ()=>{
-        setMessages([]);
-        setError(null);
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
-        className: "w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-blue-500/20 flex flex-col h-full shadow-2xl",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col h-full p-4",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center justify-between gap-3 mb-4 pb-4 border-b border-blue-500/20",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center gap-3 flex-1",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageCircle$3e$__["MessageCircle"], {
-                                        className: "w-5 h-5 text-white"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 150,
-                                        columnNumber: 15
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                    lineNumber: 149,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex-1",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-bold text-white text-sm md:text-base bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent",
-                                            children: "STL Assistant"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/stl-chatbot.tsx",
-                                            lineNumber: 153,
-                                            columnNumber: 15
-                                        }, this),
-                                        activeFileInfo ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex items-center gap-2 mt-1",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-1.5 h-1.5 rounded-full bg-green-400"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                                    lineNumber: 158,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xs text-slate-300",
-                                                    children: [
-                                                        activeFileInfo.name,
-                                                        activeFileInfo.size > 0 && ` • ${(activeFileInfo.size / 1024).toFixed(2)} KB`
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                                    lineNumber: 159,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/stl-chatbot.tsx",
-                                            lineNumber: 157,
-                                            columnNumber: 17
-                                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex items-center gap-2 mt-1",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-1.5 h-1.5 rounded-full bg-slate-500"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                                    lineNumber: 166,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xs text-slate-400",
-                                                    children: "No file loaded"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                                    lineNumber: 167,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/components/stl-chatbot.tsx",
-                                            lineNumber: 165,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                    lineNumber: 152,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 148,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center gap-2",
-                            children: [
-                                messages.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: clearChat,
-                                    className: "p-2 hover:bg-slate-700 rounded-lg transition text-slate-400 hover:text-red-400",
-                                    title: "Clear chat",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                        className: "w-4 h-4"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 180,
-                                        columnNumber: 17
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                    lineNumber: 175,
-                                    columnNumber: 15
-                                }, this),
-                                !activeFileInfo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: triggerFileInput,
-                                    className: "px-3 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg text-xs font-semibold transition flex items-center gap-1.5 whitespace-nowrap",
-                                    title: "Upload STL file",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                                            className: "w-3.5 h-3.5"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/stl-chatbot.tsx",
-                                            lineNumber: 189,
-                                            columnNumber: 17
-                                        }, this),
-                                        "Upload"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                    lineNumber: 184,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 173,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/stl-chatbot.tsx",
-                    lineNumber: 147,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                    ref: fileInputRef,
-                    type: "file",
-                    accept: ".stl",
-                    hidden: true,
-                    onChange: handleFileInputChange
-                }, void 0, false, {
-                    fileName: "[project]/components/stl-chatbot.tsx",
-                    lineNumber: 197,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex-1 overflow-y-auto mb-4 space-y-3 min-h-0 pr-2",
-                    children: [
-                        messages.length === 0 && !error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-center text-slate-300 text-sm h-full flex flex-col items-center justify-center gap-4",
-                            children: activeFileInfo ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-4xl",
-                                        children: "📊"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 211,
-                                        columnNumber: 19
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "font-semibold text-white mb-2",
-                                                children: [
-                                                    "File Ready: ",
-                                                    activeFileInfo.name
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 213,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-slate-400 mb-4",
-                                                children: "Ask anything about your 3D model"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 214,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                                className: "text-xs text-slate-400 space-y-1.5 text-left inline-block",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                        children: "💾 What's the file size?"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                                        lineNumber: 216,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                        children: "📐 What are the dimensions?"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                                        lineNumber: 217,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                        children: "🔺 How many triangles?"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                                        lineNumber: 218,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                        children: "⚙️ How to optimize it?"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                                        lineNumber: 219,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                        children: "🖨️ Ready for 3D printing?"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                                        lineNumber: 220,
-                                                        columnNumber: 23
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 215,
-                                                columnNumber: 21
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 212,
-                                        columnNumber: 19
-                                    }, this)
-                                ]
-                            }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-5xl",
-                                        children: "🎯"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 226,
-                                        columnNumber: 19
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "font-semibold text-white mb-2",
-                                                children: "STL File Assistant"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 228,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-xs text-slate-400",
-                                                children: "Upload an STL file to get started"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 229,
-                                                columnNumber: 21
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                onClick: triggerFileInput,
-                                                className: "mt-4 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-lg font-semibold text-sm transition inline-flex items-center gap-2",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                                                        className: "w-4 h-4"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                                        lineNumber: 234,
-                                                        columnNumber: 23
-                                                    }, this),
-                                                    "Select File"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 230,
-                                                columnNumber: 21
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 227,
-                                        columnNumber: 19
-                                    }, this)
-                                ]
-                            }, void 0, true)
-                        }, void 0, false, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 208,
-                            columnNumber: 13
-                        }, this),
-                        messages.map((msg, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `flex gap-3 ${msg.role === "user" ? "justify-end" : "justify-start"}`,
-                                children: [
-                                    msg.role === "assistant" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 mt-0.5",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-xs text-white font-bold",
-                                            children: "AI"
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/stl-chatbot.tsx",
-                                            lineNumber: 250,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 249,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `max-w-xs lg:max-w-md px-4 py-2.5 rounded-lg text-sm break-words ${msg.role === "user" ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-br-none" : "bg-slate-700/50 text-slate-100 rounded-bl-none border border-slate-600/50 backdrop-blur"}`,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "leading-relaxed",
-                                            children: msg.content
-                                        }, void 0, false, {
-                                            fileName: "[project]/components/stl-chatbot.tsx",
-                                            lineNumber: 260,
-                                            columnNumber: 17
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 253,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, idx, true, {
-                                fileName: "[project]/components/stl-chatbot.tsx",
-                                lineNumber: 244,
-                                columnNumber: 13
-                            }, this)),
-                        loading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex gap-3",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0 mt-0.5",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-xs text-white font-bold",
-                                        children: "AI"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 268,
-                                        columnNumber: 17
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                    lineNumber: 267,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-slate-700/50 text-slate-100 px-4 py-2.5 rounded-lg rounded-bl-none border border-slate-600/50",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex gap-2",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-2 h-2 bg-blue-400 rounded-full animate-bounce"
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 272,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-2 h-2 bg-blue-400 rounded-full animate-bounce",
-                                                style: {
-                                                    animationDelay: "0.1s"
-                                                }
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 273,
-                                                columnNumber: 19
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-2 h-2 bg-blue-400 rounded-full animate-bounce",
-                                                style: {
-                                                    animationDelay: "0.2s"
-                                                }
-                                            }, void 0, false, {
-                                                fileName: "[project]/components/stl-chatbot.tsx",
-                                                lineNumber: 274,
-                                                columnNumber: 19
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 271,
-                                        columnNumber: 17
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/stl-chatbot.tsx",
-                                    lineNumber: 270,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 266,
-                            columnNumber: 13
-                        }, this),
-                        error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex justify-center",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-red-900/30 border border-red-700/50 text-red-200 px-4 py-2.5 rounded-lg flex items-center gap-2.5 text-xs max-w-md",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
-                                        className: "w-4 h-4 flex-shrink-0"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 283,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: error
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/stl-chatbot.tsx",
-                                        lineNumber: 284,
-                                        columnNumber: 17
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/stl-chatbot.tsx",
-                                lineNumber: 282,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 281,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            ref: messagesEndRef
-                        }, void 0, false, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 289,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/stl-chatbot.tsx",
-                    lineNumber: 206,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex gap-2 mt-auto pt-2 border-t border-slate-700/50",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                            type: "text",
-                            value: input,
-                            onChange: (e)=>setInput(e.target.value),
-                            onKeyPress: handleKeyPress,
-                            placeholder: activeFileInfo ? "Ask about your STL file..." : "Upload a file first",
-                            disabled: loading || !activeFileInfo,
-                            className: "flex-1 px-4 py-2.5 rounded-lg bg-slate-700/50 border border-slate-600/50 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30 disabled:opacity-50 disabled:cursor-not-allowed text-sm transition"
-                        }, void 0, false, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 294,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                            onClick: sendMessage,
-                            disabled: loading || !input.trim() || !activeFileInfo,
-                            className: "bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-4 py-2.5 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$send$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Send$3e$__["Send"], {
-                                className: "w-4 h-4"
-                            }, void 0, false, {
-                                fileName: "[project]/components/stl-chatbot.tsx",
-                                lineNumber: 308,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/components/stl-chatbot.tsx",
-                            lineNumber: 303,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/components/stl-chatbot.tsx",
-                    lineNumber: 293,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/components/stl-chatbot.tsx",
-            lineNumber: 145,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/components/stl-chatbot.tsx",
-        lineNumber: 144,
-        columnNumber: 5
-    }, this);
-}
-_s(STLChatbot, "wol0zonuZht6mvdYE+Lv/5AKi18=");
-_c = STLChatbot;
-var _c;
-__turbopack_context__.k.register(_c, "STLChatbot");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
-}),
-"[project]/components/tabs/stl-vision-tab.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "default",
-    ()=>STLVisionTab
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$fiber$2f$dist$2f$react$2d$three$2d$fiber$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@react-three/fiber/dist/react-three-fiber.esm.js [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$OrbitControls$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/core/OrbitControls.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Bounds$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@react-three/drei/core/Bounds.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stl$2d$viewer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/stl-viewer.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$upload$2d$section$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/upload-section.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$controls$2d$panel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/controls-panel.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stl$2d$chatbot$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/stl-chatbot.tsx [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
-"use client";
-;
-;
-;
-;
-;
-;
-;
-function STLVisionTab() {
-    _s();
-    const [stlFileData, setStlFileData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [fileName, setFileName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [resetView, setResetView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [wireframe, setWireframe] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [meshColor, setMeshColor] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("3b82f6");
-    const [autoRotate, setAutoRotate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    const [stlFileInfo, setStlFileInfo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    // ✅ Calculate STL dimensions
-    const calculateSTLDimensions = (buffer)=>{
-        try {
-            const view = new DataView(buffer);
-            let minX = Number.POSITIVE_INFINITY, maxX = Number.NEGATIVE_INFINITY;
-            let minY = Number.POSITIVE_INFINITY, maxY = Number.NEGATIVE_INFINITY;
-            let minZ = Number.POSITIVE_INFINITY, maxZ = Number.NEGATIVE_INFINITY;
-            const isBinary = buffer.byteLength >= 84;
-            const vertices = [];
-            if (isBinary) {
-                const triangles = view.getUint32(80, true);
-                let offset = 84;
-                for(let i = 0; i < triangles; i++){
-                    offset += 12;
-                    for(let j = 0; j < 3; j++){
-                        const x = view.getFloat32(offset, true);
-                        const y = view.getFloat32(offset + 4, true);
-                        const z = view.getFloat32(offset + 8, true);
-                        vertices.push(x, y, z);
-                        offset += 12;
-                    }
-                    offset += 2;
-                }
-            }
-            for(let i = 0; i < vertices.length; i += 3){
-                minX = Math.min(minX, vertices[i]);
-                maxX = Math.max(maxX, vertices[i]);
-                minY = Math.min(minY, vertices[i + 1]);
-                maxY = Math.max(maxY, vertices[i + 1]);
-                minZ = Math.min(minZ, vertices[i + 2]);
-                maxZ = Math.max(maxZ, vertices[i + 2]);
-            }
-            return {
-                width: Math.abs(maxX - minX),
-                height: Math.abs(maxY - minY),
-                depth: Math.abs(maxZ - minZ)
-            };
-        } catch (err) {
-            console.error("❌ Erreur lors du calcul des dimensions:", err);
-            return {
-                width: 0,
-                height: 0,
-                depth: 0
-            };
-        }
-    };
-    // ✅ Handle file upload from both UploadSection and STLChatbot
-    const handleFileUpload = (file, buffer)=>{
-        console.log("📥 Fichier téléchargé:", file.name);
-        setFileName(file.name);
-        setStlFileData(buffer);
-        setResetView(true);
-        const fileSize = buffer.byteLength;
-        const dimensions = calculateSTLDimensions(buffer);
-        const fileInfo = {
-            name: file.name,
-            size: fileSize,
-            isValid: true,
-            dimensions: dimensions,
-            triangles: Math.floor((fileSize - 84) / 50)
-        };
-        console.log("✅ ensemble d'informations sur le fichier:", fileInfo);
-        setStlFileInfo(fileInfo);
-    };
-    // ✅ Listen for file upload from chatbot
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "STLVisionTab.useEffect": ()=>{
-            const handleFileSelected = {
-                "STLVisionTab.useEffect.handleFileSelected": (e)=>{
-                    const customEvent = e;
-                    const file = customEvent.detail.file;
-                    console.log("📁 Fichier de chatbot sélectionné:", file.name);
-                    const reader = new FileReader();
-                    reader.onload = ({
-                        "STLVisionTab.useEffect.handleFileSelected": (event)=>{
-                            const buffer = event.target?.result;
-                            if (buffer) {
-                                handleFileUpload(file, buffer);
-                            }
-                        }
-                    })["STLVisionTab.useEffect.handleFileSelected"];
-                    reader.onerror = ({
-                        "STLVisionTab.useEffect.handleFileSelected": ()=>{
-                            console.error("❌ Erreur de lecture du fichier");
-                        }
-                    })["STLVisionTab.useEffect.handleFileSelected"];
-                    reader.readAsArrayBuffer(file);
-                }
-            }["STLVisionTab.useEffect.handleFileSelected"];
-            document.addEventListener("stl-file-selected", handleFileSelected);
-            console.log("✅ Écouteur d'événements enregistré pour le fichier STL sélectionné");
-            return ({
-                "STLVisionTab.useEffect": ()=>{
-                    document.removeEventListener("fichier stl sélectionné", handleFileSelected);
-                }
-            })["STLVisionTab.useEffect"];
-        }
-    }["STLVisionTab.useEffect"], []);
-    const handleReset = ()=>{
-        setResetView(true);
-    };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "grid grid-cols-1 lg:grid-cols-4 gap-6",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "lg:col-span-2 space-y-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bg-black/40 backdrop-blur border border-white/10 rounded-xl overflow-hidden shadow-2xl",
-                        style: {
-                            height: "500px"
-                        },
-                        children: !stlFileData ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-center h-full",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$upload$2d$section$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                onFileUpload: handleFileUpload
-                            }, void 0, false, {
-                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                lineNumber: 137,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                            lineNumber: 136,
-                            columnNumber: 13
-                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$fiber$2f$dist$2f$react$2d$three$2d$fiber$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["Canvas"], {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ambientLight", {
-                                    intensity: 0.7
-                                }, void 0, false, {
-                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                    lineNumber: 141,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("directionalLight", {
-                                    position: [
-                                        10,
-                                        10,
-                                        5
-                                    ],
-                                    intensity: 0.8
-                                }, void 0, false, {
-                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                    lineNumber: 142,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("pointLight", {
-                                    position: [
-                                        -10,
-                                        -10,
-                                        -10
-                                    ],
-                                    intensity: 0.3
-                                }, void 0, false, {
-                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                    lineNumber: 143,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$Bounds$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Bounds"], {
-                                    fit: true,
-                                    clip: true,
-                                    observe: true,
-                                    margin: 1.2,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stl$2d$viewer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                        arrayBuffer: stlFileData,
-                                        resetView: resetView,
-                                        onResetComplete: ()=>setResetView(false),
-                                        wireframe: wireframe,
-                                        color: meshColor
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                        lineNumber: 146,
-                                        columnNumber: 17
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                    lineNumber: 145,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$react$2d$three$2f$drei$2f$core$2f$OrbitControls$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["OrbitControls"], {
-                                    makeDefault: true,
-                                    autoRotate: autoRotate,
-                                    autoRotateSpeed: 4,
-                                    enableDamping: true,
-                                    dampingFactor: 0.05
-                                }, void 0, false, {
-                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                    lineNumber: 155,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                            lineNumber: 140,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                        lineNumber: 131,
-                        columnNumber: 9
-                    }, this),
-                    stlFileData && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-2 gap-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                onClick: ()=>setWireframe(!wireframe),
-                                className: `py-2 px-3 rounded-lg text-sm font-semibold transition-all ${wireframe ? "bg-purple-600 text-white" : "bg-black/50 text-gray-300 border border-white/10 hover:border-white/30"}`,
-                                children: wireframe ? "Solide" : "Filaire"
-                            }, void 0, false, {
-                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                lineNumber: 169,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center gap-2 bg-black/50 rounded-lg border border-white/10 px-3",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                        type: "color",
-                                        value: "#" + meshColor,
-                                        onChange: (e)=>setMeshColor(e.target.value.slice(1)),
-                                        className: "w-8 h-8 cursor-pointer"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                        lineNumber: 181,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-xs text-gray-400",
-                                        children: "Couleur"
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                        lineNumber: 187,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                                lineNumber: 180,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                        lineNumber: 168,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                lineNumber: 129,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "lg:col-span-2 space-y-4 flex flex-col h-[500px]",
-                children: [
-                    stlFileData && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$controls$2d$panel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        fileName: fileName,
-                        wireframe: wireframe,
-                        setWireframe: setWireframe,
-                        meshColor: meshColor,
-                        setMeshColor: setMeshColor,
-                        autoRotate: autoRotate,
-                        setAutoRotate: setAutoRotate,
-                        onReset: handleReset,
-                        onNewFile: ()=>{
-                            setStlFileData(null);
-                            setFileName("");
-                            setStlFileInfo(null);
-                        }
-                    }, void 0, false, {
-                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                        lineNumber: 197,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$stl$2d$chatbot$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        stlFileInfo: stlFileInfo,
-                        fileName: fileName
-                    }, void 0, false, {
-                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                        lineNumber: 215,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-                lineNumber: 194,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
-        lineNumber: 127,
-        columnNumber: 5
-    }, this);
-}
-_s(STLVisionTab, "0AhQTNNkKZUOJkvjlAc6JWM0oow=");
-_c = STLVisionTab;
-var _c;
-__turbopack_context__.k.register(_c, "STLVisionTab");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
-}),
 "[project]/components/ui/progress.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -4158,6 +2894,1154 @@ _c = Progress;
 ;
 var _c;
 __turbopack_context__.k.register(_c, "Progress");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/tabs/stl-vision-tab.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>ChallengesTab
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/card.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/badge.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/progress.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-check.js [app-client] (ecmascript) <export default as CheckCircle2>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-alert.js [app-client] (ecmascript) <export default as AlertCircle>");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+;
+;
+const CHALLENGES = [
+    {
+        id: "1",
+        title: "Explorateur Linux",
+        description: "Découvrez les avantages de Linux pour la fabrication 3D autonome",
+        fullContent: `Linux est un système d'exploitation open-source qui offre de nombreux avantages pour les makers et les professionnels de la fabrication 3D.
+
+🎯 OBJECTIFS:
+• Comprendre les bases de Linux
+• Installer une distribution Linux (Ubuntu, Fedora)
+• Explorer le système de fichiers
+• Apprendre les commandes essentielles
+
+📚 CONTENU DÉTAILLÉ:
+
+1. Pourquoi Linux pour la fabrication 3D?
+   - Stabilité et fiabilité supérieures
+   - Communauté active de makers
+   - Compatibilité avec les outils CAO open-source
+   - Coûts réduits (gratuit et open-source)
+   - Performance optimale sur matériel ancien
+
+2. Distributions recommandées:
+   - Ubuntu: Facile pour les débutants
+   - Fedora: Très stable, mises à jour fréquentes
+   - Linux Mint: Interface intuitive
+   - Arch Linux: Pour utilisateurs avancés
+
+3. Premiers pas:
+   - Créer une clé USB bootable
+   - Installation dual-boot ou virtualisation
+   - Configuration de base du système
+   - Installation d'outils de CAO (FreeCAD, OpenSCAD)
+
+4. Commandes essentielles:
+   - Terminal et navigation
+   - Gestion des fichiers
+   - Permissions et utilisateurs
+   - Installation de paquets
+
+✅ RÉSULTAT ATTENDU:
+Vous aurez Linux opérationnel avec au minimum une application de CAO installée et fonctionnelle.`,
+        points: 10,
+        difficulty: "easy",
+        category: "system",
+        resources: [
+            "https://ubuntu.com",
+            "https://www.freecadweb.org/",
+            "https://wiki.debian.org/fr/FrontPage"
+        ]
+    },
+    {
+        id: "2",
+        title: "Alternative Open Source",
+        description: "Remplacez un logiciel GAFAM par une alternative libre pour la CAO",
+        fullContent: `Découvrez comment remplacer les outils propriétaires par des alternatives open-source et libres pour vos projets de CAO.
+
+🎯 OBJECTIFS:
+• Identifier les alternatives aux logiciels GAFAM
+• Maîtriser un outil CAO open-source
+• Créer un modèle 3D complet
+• Exporter en formats standards (STL, STEP)
+
+📚 CONTENU DÉTAILLÉ:
+
+1. Les alternatives open-source:
+   FreeCAD → Alternative à Autodesk Fusion 360
+   LibreCAD → Alternative à AutoCAD 2D
+   OpenSCAD → Programmation 3D paramétrique
+   Blender → Modélisation avancée et rendu
+
+2. Avantages des logiciels libres:
+   - Pas de licence coûteuse
+   - Accès au code source
+   - Contrôle total sur vos données
+   - Pas de limitation de fonctionnalités
+   - Communauté bienveillante
+   - Mises à jour régulières et gratuites
+
+3. Tutoriel FreeCAD (niveau moyen):
+   - Interface et outils principaux
+   - Création de sketches 2D
+   - Extrusion et opérations booléennes
+   - Assemblage de pièces
+   - Export STL pour impression 3D
+
+4. Tutoriel OpenSCAD (paramétrique):
+   - Syntaxe de base
+   - Primitives géométriques
+   - Opérations de transformation
+   - Boucles et variables
+   - Génération procédurale de formes
+
+✅ RÉSULTAT ATTENDU:
+Vous aurez créé un modèle 3D complet (minimum 2 pièces assemblées) exporté en STL et prêt pour l'impression 3D.`,
+        points: 25,
+        difficulty: "medium",
+        category: "software",
+        resources: [
+            "https://www.freecadweb.org/",
+            "https://openscad.org/",
+            "https://www.blender.org/",
+            "https://librecad.org/"
+        ]
+    },
+    {
+        id: "3",
+        title: "Matériaux Durables",
+        description: "Étudiez les plastiques écologiques et recyclables pour l'impression 3D",
+        fullContent: `Explorez les matériaux écologiques et durables disponibles pour l'impression 3D et leurs impacts environnementaux.
+
+🎯 OBJECTIFS:
+• Connaître les matériaux écologiques
+• Comprendre les propriétés techniques
+• Évaluer l'impact environnemental
+• Tester l'impression avec ces matériaux
+
+📚 CONTENU DÉTAILLÉ:
+
+1. Matériaux écologiques disponibles:
+   
+   PLA (Acide Polylactique):
+   - Source: Amidon de maïs ou canne à sucre
+   - Biodégradable (conditions industrielles)
+   - Température basse: 190-210°C
+   - Moins résistant, idéal pour prototypes
+   
+   PHA (Polyhydroxyalcanoates):
+   - Biodégradable naturellement
+   - Propriétés similaires au PET
+   - Plus cher que PLA
+   - Decomposition: 6 mois en compost
+   
+   PETG Recyclé:
+   - Fabriqué à partir de bouteilles plastiques
+   - Résistance mécanique excellente
+   - Température: 220-250°C
+   - Réduction d'énergie par rapport au neuf
+   
+   ASA Biosourcé:
+   - Partiellement d'origine biologique
+   - Résistance aux UV
+   - Durable et respectueux de l'environnement
+
+2. Certification et labels:
+   - Cradle-to-Cradle
+   - EU Ecolabel
+   - Carbon Trust Standard
+   - Declarations environnementales EPD
+
+3. Comparaison de l'empreinte carbone:
+   - ABS: ~6 kg CO2/kg produit
+   - PLA classique: ~1.5 kg CO2/kg produit
+   - PLA recyclé: ~0.5 kg CO2/kg produit
+   - PETG recyclé: ~2 kg CO2/kg produit
+
+4. Impressions de test:
+   - Benchy (test standard)
+   - Pièces fonctionnelles
+   - Évaluation de la qualité
+   - Comportement thermique
+
+✅ RÉSULTAT ATTENDU:
+Vous aurez testé au minimum 3 matériaux écologiques, évalué leur performance et créé un rapport comparatif.`,
+        points: 50,
+        difficulty: "hard",
+        category: "materials",
+        resources: [
+            "https://www.3dnatives.com/",
+            "https://www.protolabs.co.uk/",
+            "https://ultimaker.com/"
+        ]
+    },
+    {
+        id: "4",
+        title: "Économie Circulaire",
+        description: "Documentez un projet de réutilisation de matériaux imprimés",
+        fullContent: `Mettez en pratique les principes de l'économie circulaire en documentant un projet complet de réutilisation.
+
+🎯 OBJECTIFS:
+• Identifier des matériaux à recycler
+• Concevoir un produit de seconde vie
+• Implémenter le cycle complet
+• Documenter les résultats
+
+📚 CONTENU DÉTAILLÉ:
+
+1. Principes de l'économie circulaire:
+   - Elimination du concept de déchet
+   - Produits durables et réparables
+   - Utilisation de matériaux recyclables
+   - Restoration et upcycling
+   - Boucles de retour des produits
+
+2. Projet de réutilisation:
+   Exemple 1: Recycler des impressions échouées
+   Exemple 2: Créer du filament à partir de scraps
+   Exemple 3: Réutiliser pour des pièces de rechange
+   Exemple 4: Transformation créative
+
+3. Étapes du projet:
+   - Collecte des matériaux (minimum 500g)
+   - Tri et nettoyage
+   - Conception de la nouvelle pièce
+   - Impression et test
+   - Documentation photo/vidéo
+
+4. Impact mesuré:
+   - Poids de matériau recycled/réutilisé
+   - Déchets évités
+   - Économies d'énergie
+   - Économies financières
+
+✅ RÉSULTAT ATTENDU:
+Un projet documenté avec photos, vidéos et rapport montrant la transformation complète d'un déchet en produit fonctionnel.`,
+        points: 15,
+        difficulty: "easy",
+        category: "sustainability",
+        resources: [
+            "https://www.ellenmacarthurfoundation.org/",
+            "https://www.weforum.org/"
+        ]
+    },
+    {
+        id: "5",
+        title: "Autonomie Numérique",
+        description: "Configurez une chaîne de fabrication 100% autonome et locale",
+        fullContent: `Créez une chaîne de production complètement autonome, locale et utilisant uniquement des outils open-source.
+
+🎯 OBJECTIFS:
+• Mettre en place un workflow complet
+• Utiliser des outils open-source
+• Assurer la reproducibilité
+• Documenter la chaîne
+
+📚 CONTENU DÉTAILLÉ:
+
+1. Chaîne de fabrication complète:
+   
+   Conception:
+   - FreeCAD pour la modélisation
+   - OpenSCAD pour la paramétrique
+   - Inkscape pour la gravure laser
+   
+   Préparation:
+   - Cura (open-source) pour les slices
+   - PrusaSlicer (partiellement OSS)
+   - Configuration des paramètres
+   
+   Production:
+   - Imprimante open-source (RepRap, Prusa)
+   - Système de contrôle (Marlin firmware)
+   - Supervision locale uniquement
+   
+   Post-traitement:
+   - Outils locaux (sablage, finition)
+   - Nettoyage et inspection
+   - Assemblage local
+
+2. Infrastructure autonome:
+   - Serveur local pour hébergement de données
+   - Gestion de version GIT locale
+   - Sauvegarde décentralisée
+   - Pas de dépendance cloud obligatoire
+
+3. Reproducibilité:
+   - Versionnage des fichiers
+   - Documentation complète
+   - Scripts d'automatisation
+   - Partage via git/IPFS
+
+4. Métriques d'autonomie:
+   - Traçabilité 100% locale
+   - Aucune donnée vers cloud GAFAM
+   - Indépendance des fournisseurs
+   - Coût de production faible
+
+✅ RÉSULTAT ATTENDU:
+Une chaîne de production documentée capable de fabriquer des produits sans dépendance externe, avec tous les fichiers et scripts partagés publiquement.`,
+        points: 30,
+        difficulty: "medium",
+        category: "autonomy",
+        resources: [
+            "https://reprap.org/",
+            "https://www.prusa3d.com/",
+            "https://marlinfw.org/"
+        ]
+    },
+    {
+        id: "6",
+        title: "Champion NIRD",
+        description: "Complétez toutes les missions et obtenez la certification d'excellence",
+        fullContent: `Atteindre le titre de Champion NIRD en complétant l'ensemble des missions et en démontrant votre expertise.
+
+🎯 OBJECTIFS:
+• Compléter les 5 missions précédentes
+• Maîtriser tous les aspects
+• Créer un projet personnel intégrant tout
+• Obtenir la certification officielle
+
+📚 CONTENU DÉTAILLÉ:
+
+1. Vérification des prérequis:
+   ✓ Linux configuré et opérationnel
+   ✓ Logiciels CAO open-source maîtrisés
+   ✓ Matériaux écologiques testés
+   ✓ Projet d'économie circulaire documenté
+   ✓ Chaîne d'autonomie numériques établie
+
+2. Projet capstone (intégration):
+   Créer un produit complet qui:
+   - Est conçu avec FreeCAD/OpenSCAD
+   - Utilise matériaux écologiques
+   - Est imprimé avec votre chaîne autonome
+   - Intègre principes d'économie circulaire
+   - Est documenté pour reproduction
+
+3. Critères d'excellence:
+   - Qualité technique supérieure
+   - Innovation et créativité
+   - Documentation exhaustive
+   - Code source/fichiers publiés
+   - Impact communautaire
+   - Partage d'apprentissage
+
+4. Exigences de certification:
+   - Portfolio complet des 5 missions
+   - Vidéo de présentation (5-10 min)
+   - Code/fichiers open-source publié
+   - Article blog/documentation
+   - Engagement communautaire
+
+✅ RÉSULTAT ATTENDU:
+Vous serez reconnu comme Champion NIRD avec un portfolio public, une certification officielle, et une inscription au hall of fame communautaire.`,
+        points: 100,
+        difficulty: "hard",
+        category: "master",
+        resources: [
+            "https://www.nird.org/",
+            "https://www.fabacademy.org/"
+        ]
+    }
+];
+const BADGES = [
+    {
+        id: "novice",
+        name: "Apprenti 3D",
+        threshold: 30
+    },
+    {
+        id: "maker",
+        name: "Maker Responsable",
+        threshold: 75
+    },
+    {
+        id: "expert",
+        name: "Expert NIRD",
+        threshold: 150
+    },
+    {
+        id: "pioneer",
+        name: "Pionnier Durable",
+        threshold: 200
+    },
+    {
+        id: "champion",
+        name: "Champion NIRD",
+        threshold: 300
+    }
+];
+function ChallengesTab({ userProgress, setUserProgress }) {
+    _s();
+    const [selectedDifficulty, setSelectedDifficulty] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("all");
+    const [selectedChallenge, setSelectedChallenge] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [hasReadContent, setHasReadContent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [manualReadConfirm, setManualReadConfirm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [scrollProgress, setScrollProgress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const filteredChallenges = selectedDifficulty === "all" ? CHALLENGES : CHALLENGES.filter((c)=>c.difficulty === selectedDifficulty);
+    const handleOpenChallenge = (challenge)=>{
+        setSelectedChallenge(challenge);
+        setHasReadContent(false);
+        setManualReadConfirm(false);
+        setScrollProgress(0);
+    };
+    const handleContentScroll = (e)=>{
+        const element = e.currentTarget;
+        const scrollPercentage = element.scrollTop / (element.scrollHeight - element.clientHeight) * 100 || 0;
+        setScrollProgress(scrollPercentage);
+        // Marquer comme lu si scroll atteint 80%
+        if (scrollPercentage > 80 && !hasReadContent) {
+            setHasReadContent(true);
+        }
+    };
+    const handleCompleteChallenge = (challengeId)=>{
+        if (!userProgress.completedChallenges.includes(challengeId)) {
+            const challenge = CHALLENGES.find((c)=>c.id === challengeId);
+            if (challenge) {
+                const newPoints = userProgress.points + challenge.points;
+                const newLevel = Math.floor(newPoints / 100) + 1;
+                const newBadges = BADGES.filter((badge)=>newPoints >= badge.threshold).map((b)=>b.id);
+                setUserProgress({
+                    ...userProgress,
+                    points: newPoints,
+                    level: newLevel,
+                    completedChallenges: [
+                        ...userProgress.completedChallenges,
+                        challengeId
+                    ],
+                    badges: newBadges
+                });
+                setSelectedChallenge(null);
+                setHasReadContent(false);
+                setManualReadConfirm(false);
+            }
+        }
+    };
+    const nextBadge = BADGES.find((b)=>userProgress.points < b.threshold);
+    const progressToNextBadge = nextBadge ? userProgress.points % 100 / (nextBadge.threshold - (userProgress.points - userProgress.points % 100)) * 100 : 100;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "space-y-6",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                className: "bg-black/40 backdrop-blur border border-white/10 p-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-1 md:grid-cols-4 gap-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-gradient-to-br from-amber-600/20 to-orange-600/20 rounded-lg p-4 border border-white/10",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-400",
+                                        children: "Points Totaux"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 447,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-3xl font-bold text-white mt-2",
+                                        children: userProgress.points
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 448,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 446,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-gradient-to-br from-amber-600/20 to-orange-600/20 rounded-lg p-4 border border-white/10",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-400",
+                                        children: "Niveau"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 451,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-3xl font-bold text-white mt-2",
+                                        children: userProgress.level
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 452,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 450,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-gradient-to-br from-amber-600/20 to-orange-600/20 rounded-lg p-4 border border-white/10",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-400",
+                                        children: "Missions"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 455,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-3xl font-bold text-white mt-2",
+                                        children: userProgress.completedChallenges.length
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 456,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 454,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-gradient-to-br from-amber-600/20 to-orange-600/20 rounded-lg p-4 border border-white/10",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-400",
+                                        children: "Badges"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 459,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-3xl font-bold text-white mt-2",
+                                        children: userProgress.badges.length
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 460,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 458,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                        lineNumber: 445,
+                        columnNumber: 9
+                    }, this),
+                    nextBadge && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm text-gray-400 mb-2",
+                                children: [
+                                    "Progression vers ",
+                                    nextBadge.name
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 466,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Progress"], {
+                                value: Math.min(progressToNextBadge, 100),
+                                className: "h-2"
+                            }, void 0, false, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 467,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-xs text-gray-500 mt-2",
+                                children: [
+                                    userProgress.points,
+                                    " / ",
+                                    nextBadge.threshold,
+                                    " points"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 468,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                        lineNumber: 465,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                lineNumber: 444,
+                columnNumber: 7
+            }, this),
+            userProgress.badges.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                className: "bg-black/40 backdrop-blur border border-white/10 p-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "text-lg font-semibold text-white mb-4",
+                        children: "Badges Obtenus"
+                    }, void 0, false, {
+                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                        lineNumber: 478,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-wrap gap-2",
+                        children: BADGES.filter((b)=>userProgress.badges.includes(b.id)).map((badge)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
+                                className: "bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-2",
+                                children: badge.name
+                            }, badge.id, false, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 481,
+                                columnNumber: 15
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                        lineNumber: 479,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                lineNumber: 477,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex gap-2 flex-wrap",
+                children: [
+                    "all",
+                    "easy",
+                    "medium",
+                    "hard"
+                ].map((difficulty)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                        onClick: ()=>setSelectedDifficulty(difficulty),
+                        variant: selectedDifficulty === difficulty ? "default" : "outline",
+                        className: selectedDifficulty === difficulty ? "bg-gradient-to-r from-amber-600 to-orange-600 border-0" : "bg-black/40 border-white/10 text-white hover:bg-white/10",
+                        children: difficulty === "all" ? "Toutes" : difficulty === "easy" ? "Facile" : difficulty === "medium" ? "Moyen" : "Difficile"
+                    }, difficulty, false, {
+                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                        lineNumber: 492,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                lineNumber: 490,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
+                children: filteredChallenges.map((challenge)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                        className: `bg-black/40 backdrop-blur border rounded-lg p-6 transition-all cursor-pointer ${userProgress.completedChallenges.includes(challenge.id) ? "border-green-500/50 bg-green-500/10" : "border-white/10 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/20"}`,
+                        onClick: ()=>handleOpenChallenge(challenge),
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-between items-start mb-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                        className: "font-semibold text-white",
+                                        children: challenge.title
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 526,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
+                                        variant: "outline",
+                                        className: `${challenge.difficulty === "easy" ? "border-green-500 text-green-300" : challenge.difficulty === "medium" ? "border-yellow-500 text-yellow-300" : "border-red-500 text-red-300"}`,
+                                        children: challenge.difficulty === "easy" ? "Facile" : challenge.difficulty === "medium" ? "Moyen" : "Difficile"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 527,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 525,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-sm text-gray-400 mb-4",
+                                children: challenge.description
+                            }, void 0, false, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 541,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-between items-center",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-sm font-semibold text-amber-400",
+                                        children: [
+                                            challenge.points,
+                                            " pts"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 544,
+                                        columnNumber: 15
+                                    }, this),
+                                    userProgress.completedChallenges.includes(challenge.id) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-1 text-green-400",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__["CheckCircle2"], {
+                                                className: "w-4 h-4"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                lineNumber: 547,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-sm font-semibold",
+                                                children: "Complétée"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                lineNumber: 548,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 546,
+                                        columnNumber: 17
+                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-xs text-gray-400",
+                                        children: "Cliquez pour commencer"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 551,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                lineNumber: 543,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, challenge.id, true, {
+                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                        lineNumber: 516,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                lineNumber: 514,
+                columnNumber: 7
+            }, this),
+            selectedChallenge && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
+                    className: "bg-slate-900 border border-amber-500/30 max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex justify-between items-start p-6 border-b border-white/10",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                            className: "text-2xl font-bold text-white",
+                                            children: selectedChallenge.title
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 565,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-center gap-2 mt-2",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
+                                                    className: `${selectedChallenge.difficulty === "easy" ? "bg-green-600" : selectedChallenge.difficulty === "medium" ? "bg-yellow-600" : "bg-red-600"}`,
+                                                    children: selectedChallenge.difficulty === "easy" ? "Facile" : selectedChallenge.difficulty === "medium" ? "Moyen" : "Difficile"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 567,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Badge"], {
+                                                    className: "bg-amber-600",
+                                                    children: [
+                                                        selectedChallenge.points,
+                                                        " points"
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 578,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 566,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 564,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setSelectedChallenge(null),
+                                    className: "text-gray-400 hover:text-white transition",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
+                                        className: "w-6 h-6"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 585,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 581,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                            lineNumber: 563,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex-1 overflow-y-auto p-6 space-y-4",
+                            onScroll: handleContentScroll,
+                            children: [
+                                selectedChallenge.fullContent.split("\n\n").map((section, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: section.split("\n").map((line, lineIdx)=>{
+                                            if (line.startsWith("###")) {
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                    className: "text-lg font-semibold text-amber-300 mt-4",
+                                                    children: line.replace("###", "").trim()
+                                                }, lineIdx, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 598,
+                                                    columnNumber: 30
+                                                }, this);
+                                            } else if (line.startsWith("##")) {
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    className: "text-xl font-bold text-white mt-4",
+                                                    children: line.replace("##", "").trim()
+                                                }, lineIdx, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 600,
+                                                    columnNumber: 30
+                                                }, this);
+                                            } else if (line.startsWith("   -")) {
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    className: "text-gray-300 ml-6",
+                                                    children: line.replace("   -", "").trim()
+                                                }, lineIdx, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 602,
+                                                    columnNumber: 30
+                                                }, this);
+                                            } else if (line.startsWith("•")) {
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    className: "text-gray-300 ml-6",
+                                                    children: line.replace("•", "").trim()
+                                                }, lineIdx, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 604,
+                                                    columnNumber: 30
+                                                }, this);
+                                            } else if (line.startsWith("✓")) {
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    className: "text-green-300 ml-6 flex items-center gap-2",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__["CheckCircle2"], {
+                                                            className: "w-4 h-4"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                            lineNumber: 606,
+                                                            columnNumber: 104
+                                                        }, this),
+                                                        " ",
+                                                        line.replace("✓", "").trim()
+                                                    ]
+                                                }, lineIdx, true, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 606,
+                                                    columnNumber: 30
+                                                }, this);
+                                            } else if (line.trim() === "") {
+                                                return null;
+                                            } else {
+                                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-gray-300 leading-relaxed",
+                                                    children: line
+                                                }, lineIdx, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 610,
+                                                    columnNumber: 30
+                                                }, this);
+                                            }
+                                        })
+                                    }, idx, false, {
+                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                        lineNumber: 595,
+                                        columnNumber: 17
+                                    }, this)),
+                                selectedChallenge.resources.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "mt-6 pt-6 border-t border-white/10",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                            className: "font-semibold text-white mb-3",
+                                            children: "Ressources utiles"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 619,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "space-y-2",
+                                            children: selectedChallenge.resources.map((resource, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: resource,
+                                                        target: "_blank",
+                                                        rel: "noopener noreferrer",
+                                                        className: "text-blue-400 hover:text-blue-300 text-sm break-all",
+                                                        children: resource
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                        lineNumber: 623,
+                                                        columnNumber: 25
+                                                    }, this)
+                                                }, idx, false, {
+                                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                    lineNumber: 622,
+                                                    columnNumber: 23
+                                                }, this))
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 620,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 618,
+                                    columnNumber: 17
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                            lineNumber: 590,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "px-6 py-3 bg-black/20",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center justify-between mb-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-xs text-gray-400",
+                                            children: "Lecture du contenu"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 641,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-xs text-amber-400",
+                                            children: [
+                                                Math.round(scrollProgress),
+                                                "%"
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 642,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 640,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Progress"], {
+                                    value: scrollProgress,
+                                    className: "h-1.5"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 644,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                            lineNumber: 639,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex flex-col gap-3 p-6 border-t border-white/10 bg-black/20",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-3 text-sm text-gray-300",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            id: "confirm-read",
+                                            type: "checkbox",
+                                            checked: manualReadConfirm,
+                                            onChange: (e)=>setManualReadConfirm(e.target.checked),
+                                            disabled: !hasReadContent,
+                                            className: "h-4 w-4 rounded border-gray-500 bg-black/40 cursor-pointer accent-green-500"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 650,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            htmlFor: "confirm-read",
+                                            className: "cursor-pointer flex-1",
+                                            children: "Je confirme avoir lu et compris le contenu de ce challenge"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 658,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 649,
+                                    columnNumber: 15
+                                }, this),
+                                !hasReadContent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "flex items-center gap-2 text-xs text-amber-400 bg-amber-500/10 p-2 rounded border border-amber-500/20",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
+                                            className: "w-4 h-4 flex-shrink-0"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 665,
+                                            columnNumber: 19
+                                        }, this),
+                                        "Faites défiler le contenu (au moins 80%) pour activer la confirmation de lecture."
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 664,
+                                    columnNumber: 17
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex gap-3",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                            onClick: ()=>setSelectedChallenge(null),
+                                            variant: "outline",
+                                            className: "flex-1 bg-black/40 border-white/10 hover:bg-white/10 text-white",
+                                            children: "Fermer"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 671,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
+                                            onClick: ()=>handleCompleteChallenge(selectedChallenge.id),
+                                            disabled: !hasReadContent || !manualReadConfirm || userProgress.completedChallenges.includes(selectedChallenge.id),
+                                            className: `flex-1 transition ${hasReadContent && manualReadConfirm ? "bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white" : "bg-gray-600 cursor-not-allowed text-gray-300"}`,
+                                            children: userProgress.completedChallenges.includes(selectedChallenge.id) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "flex items-center gap-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__["CheckCircle2"], {
+                                                        className: "w-4 h-4"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                        lineNumber: 693,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    "Complétée"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                lineNumber: 692,
+                                                columnNumber: 21
+                                            }, this) : hasReadContent && manualReadConfirm ? "✓ Valider et compléter" : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "flex items-center gap-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
+                                                        className: "w-4 h-4"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                        lineNumber: 700,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    hasReadContent ? 'Cochez "Je confirme"' : 'Lisez (80%)'
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                                lineNumber: 699,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                            lineNumber: 678,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                                    lineNumber: 670,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                            lineNumber: 648,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                    lineNumber: 561,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+                lineNumber: 560,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/tabs/stl-vision-tab.tsx",
+        lineNumber: 442,
+        columnNumber: 5
+    }, this);
+}
+_s(ChallengesTab, "lmFRr2AL7tt2zlxWOZbrr24WjJQ=");
+_c = ChallengesTab;
+var _c;
+__turbopack_context__.k.register(_c, "ChallengesTab");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -5917,4 +5801,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=_c8cbb75e._.js.map
+//# sourceMappingURL=_7fe2660f._.js.map

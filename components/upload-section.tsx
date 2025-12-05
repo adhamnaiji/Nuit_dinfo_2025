@@ -16,7 +16,7 @@ export default function UploadSection({ onFileUpload }: UploadSectionProps) {
 
   const handleFile = async (file: File) => {
     if (!file.name.toLowerCase().endsWith(".stl")) {
-      alert("Please select an STL file")
+      alert("Veuillez sélectionner un fichier STL")
       return
     }
 
@@ -25,8 +25,8 @@ export default function UploadSection({ onFileUpload }: UploadSectionProps) {
       const buffer = await file.arrayBuffer()
       onFileUpload(file, buffer)
     } catch (error) {
-      console.error("Error loading file:", error)
-      alert("Error loading file")
+      console.error("Erreur lors du chargement du fichier:", error)
+      alert("Erreur lors du chargement du fichier")
     } finally {
       setIsLoading(false)
     }
@@ -55,8 +55,8 @@ export default function UploadSection({ onFileUpload }: UploadSectionProps) {
       <div className="space-y-8">
         {/* Title */}
         <div className="text-center space-y-2">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">Upload your 3D Model</h2>
-          <p className="text-gray-300">Upload an STL file to visualize and explore your 3D model in real-time</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Téléchargez votre modèle 3D</h2>
+          <p className="text-gray-300">Téléchargez un fichier STL pour visualiser et explorer votre modèle 3D en temps réel.</p>
         </div>
 
         {/* Upload Area */}
@@ -91,11 +91,11 @@ export default function UploadSection({ onFileUpload }: UploadSectionProps) {
                 <h3 className="text-lg md:text-xl font-semibold text-white">
                   {isDragging ? "Drop your file here" : "Drag your STL file here"}
                 </h3>
-                <p className="text-sm text-gray-400">or click to browse</p>
+                <p className="text-sm text-gray-400">ou cliquez pour parcourir</p>
               </div>
 
               <div className="pt-4 border-t border-white/10 w-full">
-                <p className="text-xs text-gray-500 text-center">Supported format: .STL (ASCII or binary)</p>
+                <p className="text-xs text-gray-500 text-center">Format pris en charge : .STL (ASCII ou binaire)</p>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function UploadSection({ onFileUpload }: UploadSectionProps) {
         {isLoading && (
           <div className="flex items-center justify-center space-x-2">
             <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-            <p className="text-gray-400">Loading file...</p>
+            <p className="text-gray-400">Chargement du fichier...</p>
           </div>
         )}
       </div>

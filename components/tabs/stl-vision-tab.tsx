@@ -63,14 +63,14 @@ export default function STLVisionTab() {
         depth: Math.abs(maxZ - minZ),
       };
     } catch (err) {
-      console.error("❌ Error calculating dimensions:", err);
+      console.error("❌ Erreur lors du calcul des dimensions:", err);
       return { width: 0, height: 0, depth: 0 };
     }
   };
 
   // ✅ Handle file upload from both UploadSection and STLChatbot
   const handleFileUpload = (file: File, buffer: ArrayBuffer) => {
-    console.log("📥 File uploaded:", file.name);
+    console.log("📥 Fichier téléchargé:", file.name);
     setFileName(file.name);
     setStlFileData(buffer);
     setResetView(true);
@@ -86,7 +86,7 @@ export default function STLVisionTab() {
       triangles: Math.floor((fileSize - 84) / 50),
     };
 
-    console.log("✅ File info set:", fileInfo);
+    console.log("✅ ensemble d'informations sur le fichier:", fileInfo);
     setStlFileInfo(fileInfo);
   };
 
@@ -96,7 +96,7 @@ export default function STLVisionTab() {
       const customEvent = e as CustomEvent;
       const file = customEvent.detail.file as File;
       
-      console.log("📁 Chatbot file selected:", file.name);
+      console.log("📁 Fichier de chatbot sélectionné:", file.name);
 
       const reader = new FileReader();
       reader.onload = (event) => {
@@ -106,16 +106,16 @@ export default function STLVisionTab() {
         }
       };
       reader.onerror = () => {
-        console.error("❌ Error reading file");
+        console.error("❌ Erreur de lecture du fichier");
       };
       reader.readAsArrayBuffer(file);
     };
 
     document.addEventListener("stl-file-selected", handleFileSelected);
-    console.log("✅ Event listener registered for stl-file-selected");
+    console.log("✅ Écouteur d'événements enregistré pour le fichier STL sélectionné");
 
     return () => {
-      document.removeEventListener("stl-file-selected", handleFileSelected);
+      document.removeEventListener("fichier stl sélectionné", handleFileSelected);
     };
   }, []);
 
